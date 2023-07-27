@@ -22,3 +22,4 @@ function keysAndValues(obj) {
   return [keys, values];
 }
 console.log(keysAndValues({ a: 1, b: 2, c: 3 }));
+console.log(keysAndValues({ a: "Apple", b: "Microsoft", c: "Google" }));
