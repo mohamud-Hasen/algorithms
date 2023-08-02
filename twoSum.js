@@ -13,7 +13,6 @@
 //     return [];
 // }
 
-
 // function twoSum(nums, target) {
 //     let numObj = {};
 //       for (let i = 0; i < nums.length; i++) {
@@ -25,7 +24,7 @@
 //       }
 //     }
 
-//brute force method
+//brute force approach
 
 // function twoSum(nums, target) {
 //     for(let i = 0; i < nums.length; i++) {
@@ -40,30 +39,30 @@
 
 // #2 by using hashMap method
 function twoSum(nums, target) {
-    const numMap = {};
+  const numMap = {};
 
-    for(let i = 0; i < nums.length; i++) {
-        const complement = target - nums[i];
-        if(numMap.hasOwnProperty(complement)) {
-          return [numMap[complement], i];
-        }
-        numMap[nums[i]] = i;
+  for (let i = 0; i < nums.length; i++) {
+    const complement = target - nums[i];
+    if (numMap.hasOwnProperty(complement)) {
+      return [numMap[complement], i];
     }
-    return [];
+    numMap[nums[i]] = i;
+  }
+  return [];
 }
 // function twoSum(nums, target) {
 //     for(let i = 0; i <nums.length; i++) {
 //         for(let j = i + 1; j < nums.length; j++){
 //             if(nums[i] + nums[j] === target){
 //                 return [i, j];
-//             } 
+//             }
 //         }
 //     }
 //     return [];
 // }
 
-const nums = [2,7,11,15];
-const target = 9
+const nums = [2, 7, 11, 15];
+const target = 9;
 // const nums = [3,2,4];
 // const target = 6
 const result = twoSum(nums, target);
